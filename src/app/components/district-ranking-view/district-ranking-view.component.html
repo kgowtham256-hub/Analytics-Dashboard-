@@ -1,0 +1,21 @@
+<div class="ranking-container">
+  <h2>All District with Ranking</h2>
+
+  <div class="ranking-cards-wrapper">
+    <button (click)="prev()" [disabled]="currentIndex === 0" class="nav-button">
+        &lt;
+    </button>
+    
+    <div class="ranking-cards">
+      <div *ngFor="let district of displayData" class="rank-card dashboard-card">
+        <div class="district-name">{{ district.district }}</div>
+        <div class="rank-text">{{ getRankText(district.rank) }}</div>
+        <div class="rank-label">Rank</div>
+      </div>
+    </div>
+
+    <button (click)="next()" [disabled]="currentIndex + itemsPerPage >= data.length" class="nav-button">
+        &gt;
+    </button>
+  </div>
+</div>

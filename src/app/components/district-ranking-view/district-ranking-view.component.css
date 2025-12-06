@@ -1,0 +1,68 @@
+/* src/app/components/district-ranking-view/district-ranking-view.component.css */
+.ranking-container {
+    padding: 20px 0;
+}
+
+.ranking-cards-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ranking-cards {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* Shows 8 columns wide */
+    gap: 15px;
+    flex-grow: 1;
+    overflow: hidden; /* Important for the scrolling/pagination effect */
+}
+
+.rank-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 10px;
+    text-align: center;
+    min-height: 100px;
+    cursor: pointer;
+}
+
+.district-name {
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.rank-text {
+    font-size: 1.5em;
+    font-weight: 900;
+    color: var(--color-blue); /* Highlight the rank */
+    margin-bottom: 5px;
+}
+
+.rank-label {
+    font-size: 0.8em;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+}
+
+.nav-button {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2em;
+    line-height: 1;
+    transition: all 0.2s;
+}
+
+.nav-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
